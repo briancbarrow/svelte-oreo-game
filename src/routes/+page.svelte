@@ -15,7 +15,7 @@
   let flavors = [
     { name: 'caramel Coconut', visible: false, img: caramel_coconut },
     { name: 'birthday cake', visible: false, img: birthday_cake },
-    { name: 'carrot_cake', visible: false, img: carrot_cake },
+    { name: 'carrot cake', visible: false, img: carrot_cake },
     { name: 'chocolate hazelnut', visible: false, img: chocolate_hazelnut },
     { name: 'cinnamon bun', visible: false, img: cinnamon_bun },
     { name: 'dark chocolate', visible: false, img: dark_chocolate },
