@@ -14,12 +14,13 @@
     { name: 'pumpkin pie', visible: false }
   ];
 
-  let showAll = false;
-
   function showAllThings() {
-    showAll = true;
+    flavors.forEach((f) => (f.visible = true));
+    //svelte is reactive on assignment, so we re-assign flavors to trigger reactivity after the forEach
+    flavors = flavors
     setTimeout(() => {
-      showAll = false;
+      flavors.forEach((f) => (f.visible = false));
+      flavors = flavors
     }, 2000);
   }
 </script>
@@ -29,7 +30,7 @@
   <div class="gameboard">
     {#each flavors as flavor, i}
       <p on:click={() => (flavor.visible = !flavor.visible)}>
-        {showAll || flavor.visible ? flavor.name : i + 1}
+        {flavor.visible ? flavor.name : i + 1}
       </p>
     {/each}
   </div>
